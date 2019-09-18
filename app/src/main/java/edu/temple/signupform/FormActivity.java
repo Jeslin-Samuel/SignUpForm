@@ -48,6 +48,16 @@ public class FormActivity extends AppCompatActivity
                 {
                     Toast.makeText(FormActivity.this, "Please enter all information.", Toast.LENGTH_SHORT).show();
                 }
+
+                else {
+                    if (passwordEdit.getText().toString().matches(confirmEdit.getText().toString())) {
+                        Toast.makeText(FormActivity.this, "Welcome, " + nameEdit.getText().toString() + ", to the SignUpForm App", Toast.LENGTH_SHORT).show();
+                    }
+
+                    else {
+                        Toast.makeText(FormActivity.this, "Error! Password is incorrect. Try Again", Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
         });
     }
